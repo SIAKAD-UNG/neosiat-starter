@@ -8,8 +8,8 @@ import { Suspense } from "react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-    title: "UNG Starter",
-    description: "Create skeleton nextjs",
+    title: "Neosiat Starter",
+    description: "Create skeleton nextjs app with template",
 };
 
 export default function RootLayout({
