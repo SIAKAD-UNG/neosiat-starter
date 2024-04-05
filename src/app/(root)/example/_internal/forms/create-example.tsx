@@ -1,8 +1,26 @@
+"use client"
+
 import { User2Icon as PhotoIcon, UserCheck2Icon as UserCircleIcon } from "lucide-react"
+import { useForm, type SubmitHandler } from "react-hook-form"
+import { zodResolver } from "@hookform/resolvers/zod"
+import { FormValueExampleSchema, type FormValueExample } from "../use-cases/example"
 
 export default function CreateExample() {
+    const { register, handleSubmit } = useForm<FormValueExample>({
+        resolver: zodResolver(FormValueExampleSchema)
+    })
+
+    const submitAction: SubmitHandler<FormValueExample> = async (data) => {
+        console.log(data)
+    }
+
+    const onSubmitHandler = async (event: React.FormEvent<HTMLFormElement>) => {
+        console.log(event)
+        await handleSubmit(submitAction)(event)
+    }
+
     return (
-        <form>
+        <form onSubmit={onSubmitHandler}>
             <div className="space-y-12">
                 <div className="border-b border-gray-900/10 pb-12">
                     <h2 className="text-base font-semibold leading-7 text-gray-900">Profile</h2>
@@ -19,6 +37,7 @@ export default function CreateExample() {
                                 <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
                                     <span className="flex select-none items-center pl-3 text-gray-500 sm:text-sm">workcation.com/</span>
                                     <input
+                                        {...register("username")}
                                         type="text"
                                         name="username"
                                         id="username"
@@ -218,7 +237,7 @@ export default function CreateExample() {
                 <div className="border-b border-gray-900/10 pb-12">
                     <h2 className="text-base font-semibold leading-7 text-gray-900">Notifications</h2>
                     <p className="mt-1 text-sm leading-6 text-gray-600">
-                        We'll always let you know about important changes, but you pick what else you want to hear about.
+                        {`We'll always let you know about important changes, but you pick what else you want to hear about.`}
                     </p>
 
                     <div className="mt-10 space-y-10">

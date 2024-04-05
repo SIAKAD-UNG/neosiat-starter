@@ -5,6 +5,7 @@ import { DatePickerDemo } from "./date-picker";
 import { DialogDemo } from "./dialog";
 import { DropdownMenuDemo } from "./dropdown-menu";
 import { PopoverDemo } from "./popover";
+import RowItemComponent from "./row-item";
 import { SheetDemo } from "./sheet";
 import { ToastDemo } from "./toast";
 import { TooltipDemo } from "./tooltip";
@@ -93,6 +94,14 @@ export default function ExampleComponent() {
                     <div className="text-sm font-normal text-black leading-4">Displays a menu to the user — such as a set of actions or functions — triggered by a button.</div>
                 </div>
                 <DropdownMenuDemo />
+            </div>
+
+            <div className="p-4 rounded-xl bg-gray-200 mb-4">
+                <div className="py-3">
+                    <div className="text-sm font-semibold text-black leading-4">Data Table</div>
+                    <div className="text-sm font-normal text-black leading-4">Supercharge your tables or build a datagrid from scratch for TS/JS, React, Vue, Solid & Svelte while retaining 100% control over markup and styles.</div>
+                </div>
+                <RowItemComponent />
             </div>
         </>
     )
