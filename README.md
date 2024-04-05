@@ -33,3 +33,24 @@
 ```
 
 ### Keterangan selanjutnya bisa dibaca pada docs/manual-book.md
+
+### Cara install
+
+```sh
+npx create-next-app@latest --use-npm -e https://github.com/Pustikom-UNG/neosiat-starter
+# masuk ke folder
+cd my-app
+npm run dev
+```
+
+### Generate auth secret
+
+pada file
+
+**.env.local**
+
+```
+# https://next-auth.js.org/configuration/options
+# Linux: `openssl rand -hex 32` or go to https://generate-secret.vercel.app/32
+AUTH_SECRET=
+```
