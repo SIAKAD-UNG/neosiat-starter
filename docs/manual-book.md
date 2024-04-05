@@ -1,6 +1,6 @@
-# Manual book UNG Starter
+# Manual book Neosiat Starter
 
-Base project adalah sebiah skeleton aplikasi untuk memudahkan pengembangan aplikasi dengan
+Base project adalah sebuah skeleton aplikasi untuk memudahkan pengembangan aplikasi dengan
 package2 yang sudah distandarisasi dan telahtersedia konfigurasi bdasar.
 base project ini menggunakan nextjs 14 sebagai framework utama
 
