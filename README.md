@@ -34,11 +34,13 @@
 
 ### Keterangan selanjutnya bisa dibaca pada docs/manual-book.md
 
+Gunakan nodejs v18 LTS dan npm v10
+
 ### Cara install
 
 ```sh
-npx create-next-app@latest --use-npm -e https://github.com/Pustikom-UNG/neosiat-starter
-# masuk ke folder
+npx create-next-app@latest my-app --use-npm -e https://github.com/Pustikom-UNG/neosiat-starter
+# masuk ke direktori aplikasi
 cd my-app
 npm run dev
 ```

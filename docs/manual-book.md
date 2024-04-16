@@ -7,9 +7,9 @@ base project ini menggunakan nextjs 14 sebagai framework utama
 ## Perlu disiapkan
 
 - Typescript
-- Nodejs v20.12 atau terbaru
-- Npm 10.5
-- Nextjs 14.1
+- Nodejs v18 atau terbaru
+- Npm 10
+- Nextjs 14
 
 ## Installation
 
