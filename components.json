@@ -6,12 +6,13 @@
   "tailwind": {
     "config": "tailwind.config.ts",
     "css": "src/app/globals.css",
-    "baseColor": "gray",
-    "cssVariables": true,
+    "baseColor": "slate",
+    "cssVariables": false,
     "prefix": ""
   },
   "aliases": {
     "components": "@/main/components",
-    "utils": "@/main/utils"
+    "ui": "@/main/components/default",
+    "utils": "@/main/tw-merge"
   }
 }

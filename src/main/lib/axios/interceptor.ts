@@ -1,17 +1,23 @@
-import type { AxiosInstance } from "axios";
+// import { getAccessToken, getRoleAccess } from "@/main/utils"
+import { type AxiosInstance } from "axios"
 
-export const addBaseInterceptors = (instance: AxiosInstance) => {
-    instance.interceptors.request.use((config: any) => {
-        console.log("config", config)
-        if (config.headers === undefined) {
-            config.headers = {};
+export const addBasePrivateInterceptors = (instance: AxiosInstance) => {
+    instance.interceptors.request.use((config) => {
+        // const accessToken = getAccessToken()
+        // const roleAccess = getRoleAccess()
+        // config.headers["Authorization"] = `Bearer ${accessToken}`
+        // config.headers["X-App-Role"] = roleAccess.toString()
+
+        return config
+    })
+
+    instance.interceptors.response.use((config) => {
+        return config
+    }, (error) => {
+        if (error.response.status === 403)  {
+            window.location.href= "/403"
         }
 
-        config.headers = {
-            ...config.headers,
-            /* add authorization headers etc.*/
-        };
-
-        return config;
-    });
-};
+        return Promise.reject(error)
+    })
+}

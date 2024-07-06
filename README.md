@@ -5,13 +5,12 @@
 ```
   src -----------------> Sources
     | app -------------> Routes
-    |  | _action ------> Usage for next server action
-    |  | _internal ----> Client (current route usage): files, components, layout, ui lojik, ui component
+    |  | _internal ----> Client (current route usage): files, components, layout, ui logic, ui component
     |  |    | components
     |  |    | hooks
     |  |    | lib
     |  |    | providers
-    |  |    | use-cases
+    |  |    | usecases
     |  |    | utils
     |  |    | forms
     |  | layout.tsx ----> Layout (optional)
@@ -19,15 +18,11 @@
     | main -------------> Client (Global Usage): files, components, layout, ui lojik, ui component
     |  | components ----> components
     |  | hooks ---------> hooks
-    |  | lib -----------> library
+    |  | common --------> library or function in client component
     |  | providers -----> Context, provider, global state
-    |  | use-cases -----> client lojik, ui lojik
-    |  | utils ---------> Penyedap rasa
+    |  | usecases ------> client logic
+    |  | utils.tsx -----> Utilitas untuk shadcnui
     |  | forms ---------> Form components
-    | lib --------------> Server usage (optional, global usage)
-    |  | config --------> Server configuration
-    |  | use-cases -----> Logic, data, model, entity
-    |  | repository ----> query database, model data, database layer
     | middleware.ts
     | auth.ts
 ```
@@ -39,15 +34,15 @@ Gunakan nodejs v18 LTS dan npm v10
 ### Cara install
 
 ```sh
-npx create-next-app@latest my-app --use-npm -e https://github.com/Pustikom-UNG/neosiat-starter
+npx create-next-app@latest nama-aplikasi --use-npm -e https://github.com/Pustikom-UNG/neosiat-starter
 # masuk ke direktori aplikasi
-cd my-app
+cd nama-aplikasi
 npm run dev
 ```
 
 ### Generate auth secret
 
-pada file
+Ada pada pada file
 
 **.env.local**
 
